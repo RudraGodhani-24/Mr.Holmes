@@ -227,7 +227,7 @@ class Config:
                     out = input("\nAPI-KEY NOT CHANGED PRESS ENTER TO EXIT")
                     os.chdir("../")
                 else:
-                    Parser.set("Settings","Path",key)
+                    Parser.set("Settings","Api_Key",key)
                     with open(nomefile, 'w') as configfile:
                         Parser.write(configfile)
                     print("\nAPI-KEY CHANGED SUCCESSFULLY")
@@ -265,6 +265,7 @@ class Config:
                 inp = input(Font.Color.RED + "\n[!]" + Font.Color.WHITE + "FILE NOT FOUND\n\nPRESS ENTER TO CONTINUE")
                 os.chdir("../")
     
+    @staticmethod
     def modify_Log():
         alert = int(input(
             Font.Color.RED + "\n[!]" + Font.Color.WHITE + "ARE YOU SURE TO MODIFY YOUR LOG OPTION?(1)YES(2)NO" + Font.Color.RED + "[!]" + Font.Color.GREEN + "\n\n[#MR.HOLMES#]" + Font.Color.WHITE + "-->"))
